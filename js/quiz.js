@@ -59,7 +59,7 @@
         answerContainers[questionNumber].style.color = "red";
         var this_container = answerContainers[questionNumber]
         //var correct_idx = currentQuestion.correctAnswer
-        var correct_answer_html = this_container.children[]
+        var correct_answer_html = this_container.children[2]
         correct_answer_html.style.color = "blue"
       }
     });
