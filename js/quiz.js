@@ -57,6 +57,10 @@
         // if answer is wrong or blank
         // color the answers red
         answerContainers[questionNumber].style.color = "red";
+        var this_container = answerContainers[questionNumber]
+        //var correct_idx = currentQuestion.correctAnswer
+        var correct_answer_html = this_container.children[]
+        correct_answer_html.style.color = "blue"
       }
     });
 
