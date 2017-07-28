@@ -31,7 +31,26 @@
     // finally combine our output list into one string of HTML and put it on the page
     quizContainer.innerHTML = output.join("");
   }
+ function lettertonumber(letter) {
+   var number=0
+   if (letter == 'a'){
+     number = 0;
 
+   }
+   else if(letter=='b'){
+     number=1;
+
+   }
+   else if(letter=='c'){
+     number=2;
+
+   }
+   else if(letter=='d'){
+     number=3;
+
+   }
+  return 0
+ }
   function showResults() {
     // gather answer containers from our quiz
     const answerContainers = quizContainer.querySelectorAll(".answers");
@@ -53,13 +72,13 @@
 
         // color the answers green
         answerContainers[questionNumber].style.color = "#0000FF";
-      } else {
+      } else{
         // if answer is wrong or blank
         // color the answers red
         answerContainers[questionNumber].style.color = "red";
         var this_container = answerContainers[questionNumber]
-        //var correct_idx = currentQuestion.correctAnswer
-        var correct_answer_html = this_container.children[2]
+        var correct_idx = lettertonumber(currentQuestion.correctAnswer)
+        var correct_answer_html = this_container.children[correct_idx]
         correct_answer_html.style.color = "blue"
       }
     });
@@ -73,35 +92,106 @@
   const submitButton = document.getElementById("submit");
   const myQuestions = [
     {
-      question: "Who is the strongest?",
+      question: "1. What single food has the highest total number of resulting illnesses?",
       answers: {
-        a: "Superman",
-        b: "The Terminator",
-        c: "Waluigi, obviously"
+        a: "Cantaloupes",
+        b: "Chicken",
+        c: "Salad",
+        d: "Ice"
       },
       correctAnswer: "c"
     },
     {
-      question: "What is the best site ever created?",
+      question: "2. What bacteria has the highest mortality rate?",
       answers: {
-        a: "SitePoint",
-        b: "Simple Steps Code",
-        c: "Trick question; they're both the best"
+        a: "Listeria",
+        b: "Salmonella",
+        c: "Norovirus",
+        d: "Clostridium"
+      },
+      correctAnswer: "a"
+    },
+    {
+      question: "3. What color is the year/total illness line graph?",
+      answers: {
+        a: "Mustard yellow",
+        b: "Blue",
+        c: "Neon Purple",
+        d: "Magenta"
       },
       correctAnswer: "c"
     },
     {
-      question: "Where is Waldo really?",
+      question: "4. What is the most common bacteria in terms of total illness count?",
       answers: {
-        a: "Antarctica",
-        b: "Exploring the Pacific Ocean",
-        c: "Sitting in a tree",
-        d: "Minding his own business, so stop asking"
+        a: "Listeria",
+        b: "Norovirus",
+        c: "Salmonella",
+        d: "Hepatitis A"
+      },
+      correctAnswer: "b"
+    },
+    {
+      question: "5. What state has the highest average number of illnesses?",
+      answers: {
+        a: "Washington",
+        b: "Louisiana",
+        c: "Russia",
+        d: "Ohio"
+      },
+      correctAnswer: "b"
+    },
+    {
+      question: "6. Which venue has caused the second highest number of illnesses?",
+      answers: {
+        a: "Restaurant",
+        b: "Prison",
+        c: "Religious facility",
+        d: "Catering Service"
       },
       correctAnswer: "d"
+    },
+    {
+      question: "7. What is the general trend of total number of foodborne illnesses per year from 1998-2015?",
+      answers: {
+        a: "Upward",
+        b: "Downward",
+        c: "Straight",
+        d: "Trendy"
+      },
+      correctAnswer: "b"
+    },
+    {
+      question: "8. What is the title of our paper?",
+      answers: {
+        a: "There's no I in team, but there is in Listeria",
+        b: "Melancholy",
+        c: "Foodborne=Fooddeath",
+        d: "feel the Borne"
+      },
+      correctAnswer: "a"
+    },
+    {
+      question: "9. What is the most dangerous melon?",
+      answers: {
+        a: "Cantaloupe",
+        b: "Watermelon",
+        c: "Honeydew",
+        d: "Pumpkin"
+      },
+      correctAnswer: "a"
+    },
+    {
+      question: "10. Should you eat salsa?",
+      answers: {
+        a: "Yes",
+        b: "No",
+        c: "Maybe",
+        d: "Untitles"
+      },
+      correctAnswer: "b"
     }
   ];
-
   // display quiz right away
   buildQuiz();
 
