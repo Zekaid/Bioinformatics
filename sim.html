@@ -1,0 +1,35 @@
+<html>
+<head>
+  <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+</head>
+<script>
+function do_stuff(safe) {
+  var my_number = Math.random();
+  if(my_number <safe)
+  {
+      alert("The food is poisonous!");
+  }
+  else{
+      alert("The food is good!");
+  }
+}
+
+</script>
+<body>
+
+<button type="button"class="em em-pig2" onclick="do_stuff(0.09);"></button>
+<button type="button"class="em em-tomato" onclick="do_stuff(0.08);"></button>
+<button type="button"class="em em-fries" onclick="do_stuff(0.07);"></button>
+
+<br/>
+<button type="button"class="em em-egg" onclick="do_stuff(0.06);"></button>
+<button type="button"class="em em-baby_chick" onclick="do_stuff(0.05);"></button>
+<button type="button"class="em em-chicken" onclick="do_stuff(0.04);"></button>
+
+<br/>
+<button type="button"class="em em-baby_bottle" onclick="do_stuff(0.03);"></button>
+<button type="button"class="em em-fallen_leaf" onclick="do_stuff(0.02);"></button>
+<button type="button"class="em em-cake" onclick="do_stuff(0.01);"></button>
+
+</body>
+</html>
